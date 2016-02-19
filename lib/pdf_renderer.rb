@@ -5,6 +5,5 @@ module PdfRenderer
 		pdf = Prawn::Document.new
 		pdf.text render_to_string(options)
 		send_data(pdf.render, filename: "#{filename}.pdf", disposition: "attachment")
-		
 	end
 end
